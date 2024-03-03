@@ -14,3 +14,20 @@ const isbankAccount = "234567891011121";
 let validCheck =
   isbankAccount.length === 15 ? "Valid Bank Account" : "Invalid Bank Account";
 console.log(validCheck);
+
+// switch case in javascript
+
+const option = 4;
+switch (option) {
+  case 1:
+    console.log("Namaste!");
+    break;
+  case 2:
+    console.log("Hello");
+    break;
+  case 3:
+    console.log("Bonjour!");
+    break;
+  default:
+    console.log("Invalid Option Chosen!");
+}
