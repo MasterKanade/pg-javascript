@@ -49,11 +49,17 @@
 
 // hoisting example for the normal function.
 
-sayHey(); // it will execute in the normal function
+// sayHey(); // it will execute in the normal function
 
-function sayHey() {
-  // this would be created first in the memory.
-  console.log("Hello There");
-}
+// function sayHey() {
+//   // this would be created first in the memory.
+//   console.log("Hello There");
+// }
+
+// hoisting is not possible in the Arrow function
+
+sayHey(); // Cannot access 'sayHey' before initialization in JS.
+
+let sayHey = () => console.log("Hey There");
 
 // 4. this keyword
