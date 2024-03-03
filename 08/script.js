@@ -68,9 +68,11 @@
 // this keyword is only acceptable in the normal function
 let person = {
   firstName: "Mayur",
-  getDetails: function () {
+  getDetails: () => {
     console.log("The name of the person is: " + this.firstName);
   },
 };
 
-console.log(person.getDetails()); // calling the object function
+console.log(person.getDetails()); // calling the object function returns the object
+// the value is undefined for the same.
+// because this keyword in Arrow function refers to the Windows object.
