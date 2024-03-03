@@ -2,9 +2,9 @@
 
 // For loop : if you know for how many times to loop.
 // you know how many iterations will be there then use for loop.
-for (let i = 1; i <= 10; i++) {
-  console.log("Mayur " + i);
-}
+// for (let i = 1; i <= 10; i++) {
+//   console.log("Mayur " + i);
+// }
 
 /*
    you                    house
@@ -15,10 +15,16 @@ for (let i = 1; i <= 10; i++) {
 let initialPosition = 0;
 let house = 50;
 
-while (initialPosition != house) {
-  initialPosition++;
-  console.log("Steps taken: " + initialPosition);
-}
+// while (initialPosition != house) {
+//   initialPosition++;
+//   console.log("Steps taken: " + initialPosition);
+// }
 
 /*
+when you want to execute the code first and then check for the condition then use do while loop.
  */
+
+do {
+  initialPosition++;
+  console.log("Steps taken: " + initialPosition);
+} while (initialPosition >= house);
