@@ -35,5 +35,21 @@ function addParaNumbers() {
   return ans;
 }
 
-let result = addParaNumbers(12, 222, 557, 987, 789);
-console.log(result);
+function addNumbers_v2(...numbers) {
+  let ansv2 = 0;
+  for (let k = 0; k < numbers.length; k++) {
+    ansv2 += numbers[k];
+  }
+  return ansv2;
+}
+
+let result = addParaNumbers(100, 200, 300, 400, 500);
+let result2 = addNumbers_v2(200, 200, 500);
+
+console.log(
+  `The addition of all the arguments passed in the function is:  ${result}`
+);
+
+console.log(
+  `Calling function using spread operator in JS and addition is: ${result2}`
+);
