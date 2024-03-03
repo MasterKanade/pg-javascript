@@ -31,3 +31,26 @@ switch (option) {
   default:
     console.log("Invalid Option Chosen!");
 }
+
+// second example
+
+let a = 30;
+let b = 40;
+let opt = "+";
+
+switch (opt) {
+  case "+":
+    console.log(a + b);
+    break;
+  case "-":
+    console.log(b - a);
+    break;
+  case "*":
+    console.log(a * b);
+    break;
+  case "/":
+    console.log(a / b);
+    break;
+  default:
+    console.log("Invalid Operator");
+}
