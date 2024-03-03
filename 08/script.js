@@ -60,7 +60,17 @@
 
 // sayHey(); // Cannot access 'sayHey' before initialization in JS.
 
-let sayHey = () => console.log("Hey There");
-sayHey(); // it should be called after the initialization and no error.
+// let sayHey = () => console.log("Hey There");
+// sayHey(); // it should be called after the initialization and no error.
 
 // 4. this keyword
+
+// this keyword is only acceptable in the normal function
+let person = {
+  firstName: "Mayur",
+  getDetails: function () {
+    console.log("The name of the person is: " + this.firstName);
+  },
+};
+
+console.log(person.getDetails()); // calling the object function
