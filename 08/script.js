@@ -58,8 +58,9 @@
 
 // hoisting is not possible in the Arrow function
 
-sayHey(); // Cannot access 'sayHey' before initialization in JS.
+// sayHey(); // Cannot access 'sayHey' before initialization in JS.
 
 let sayHey = () => console.log("Hey There");
+sayHey(); // it should be called after the initialization and no error.
 
 // 4. this keyword
