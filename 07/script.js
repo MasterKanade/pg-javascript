@@ -30,7 +30,7 @@
 function addParaNumbers() {
   let ans = 0;
   for (let i = 0; i < arguments.length; i++) {
-    ans += arguments[i];
+    ans += arguments[i]; //argument keyword taking the multiple arguments dynamically at runtime.
   }
   return ans;
 }
