@@ -29,7 +29,7 @@ function square(num) {
 }
 
 let forEachSquare = numStore.forEach((val) => square(val));
-console.log(forEachSquare); // forEach does not return any value.
+console.log(forEachSquare); // forEach does not return any value. output : undefined.
 
 let mapSquare = numStore.map((val) => square(val));
-console.log(mapSquare); // map returns the value into newArray.
+console.log(mapSquare); // map returns the value into newArray. output: [4,16,36,64]
