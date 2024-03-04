@@ -17,6 +17,19 @@ console.log(newArr); */
 // .map method returns a value and it does not required any new array to store the value.
 // .map method creates a new array automatically when returns some values
 
-const numbers = [1, 2, 5, 6, 9];
-let newStorage = numbers.map((val) => val * 2); // here it returns the new array.
-console.log(newStorage);
+// const numbers = [1, 2, 5, 6, 9];
+// let newStorage = numbers.map((val) => val * 2); // here it returns the new array.
+// console.log(newStorage);
+
+let numStore = [2, 4, 6, 8]; //  this is myArray
+
+function square(num) {
+  // Square Function
+  return num * num;
+}
+
+let forEachSquare = numStore.forEach((val) => square(val));
+console.log(forEachSquare); // forEach does not return any value.
+
+let mapSquare = numStore.map((val) => square(val));
+console.log(mapSquare); // map returns the value into newArray.
