@@ -9,7 +9,14 @@
 
 // forEach method doesn't return any value and
 // if you want to store the value of forEach into another array you have to create a new array explicitly.
-const numbers = [1, 2, 5, 6, 9];
+/* const numbers = [1, 2, 5, 6, 9];
 let newArr = [];
 numbers.forEach((num) => newArr.push(num * 2)); // because forEach() does not return
-console.log(newArr);
+console.log(newArr); */
+
+// .map method returns a value and it does not required any new array to store the value.
+// .map method creates a new array automatically when returns some values
+
+const numbers = [1, 2, 5, 6, 9];
+let newStorage = numbers.map((val) => val * 2); // here it returns the new array.
+console.log(newStorage);
