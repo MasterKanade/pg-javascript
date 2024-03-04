@@ -9,26 +9,49 @@
     <nav>This is my Nav Bar</nav>
     <div class="block">
       <p class="para">The new car has been taken for the Enjoyment</p>
-      <p>
+      <p class="para2">
         Busy people, always makes an exception to do not attend any Program.
       </p>
+    </div>
+    <div>
+      <div>Nested Div</div>
+      <h3>new div has been taken for the QuerySelector</h3>
+      <h3>It will not be hacked until we choose QuerySelectAll for Div</h3>
     </div>
     <pre><code>console.log('hey there');</code></pre>
     <script>
       // QuerySelector in Javascript
       /* You can apply QuerySelector in Javascript by using following 3 ways:
-      
+
       1. tag : HTML tag can be used to change the scenario
       2. id : #id name to select particular change.
       3. class: .class-name to perform operations on either one or more classes.
-      
+
       */
 
       // 1. tag : by selecting a particular tag you can change the HTML page
       // for example.
       // The main content from the body has been replaced by new text using Javascript.
-      const bodyChange = document.querySelector("body");
-      bodyChange.innerHTML = "<h1> The Page is Hacked!!! </h1>";
+      /* const bodyChange = document.querySelector("body");
+      bodyChange.innerHTML = "<h1> The Page is Hacked!!! </h1>"; */
+
+      // The particular tag's content change using Javascript
+
+      /* const divChange = document.querySelector("div");
+      divChange.innerHTML = "<h1> ONLY DIV CHANGE IS HACKED"; */
+
+      // here only first div element from the top to bottom has been changed not all the divs.
+      // to perform actions on all div tags we need to put querySelectorAll() method.
+      // example:
+
+      const alldivChange = document.querySelectorAll("div");
+      for (let i = 0; i < alldivChange.length; i++) {
+        alldivChange[i].style.backgroundColor = "red";
+        alldivChange[i].innerHTML = "DIV tag Hacked";
+      }
+
+      const codeChange = document.querySelector("code");
+      codeChange.innerHTML = `alert('hey there')`;
     </script>
   </body>
 </html>
