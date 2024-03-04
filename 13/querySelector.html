@@ -8,13 +8,13 @@
   <body>
     <nav>This is my Nav Bar</nav>
     <div class="block">
-      <p class="para">The new car has been taken for the Enjoyment</p>
+      <p class="block">The new car has been taken for the Enjoyment</p>
       <p id="second-para">
         Busy people, always makes an exception to do not attend any Program.
       </p>
     </div>
     <div>
-      <div>Nested Div</div>
+      <div class="block">Nested Div</div>
       <h3>new div has been taken for the QuerySelector</h3>
       <h3>It will not be hacked until we choose QuerySelectAll for Div</h3>
     </div>
@@ -58,8 +58,18 @@
       /*const changeparabyID = document.querySelector("#second-para");
       changeparabyID.innerHTML =
         "<marquee>The #ID Applied using QuerySelector </marquee>"; */
-      const changeparabyID = document.querySelector("#second-para");
-      changeparabyID.innerText = "Changing the Text of the Paragraph Second";
+      /* const changeparabyID = document.querySelector("#second-para");
+      changeparabyID.innerText = "Changing the Text of the Paragraph Second"; */
+
+      // innerHTML and innerText are the code injections.
+
+      // 3. applying .class using querySelector
+      // document.querySelector always selects first Element from the document.
+
+      /*const changeClassStruct = document.querySelector(".block");
+      console.log(changeClassStruct.innerHTML); // whatever .block class comes first it selects only that one. */
+      const changeClassStruct = document.querySelectorAll(".block");
+      changeClassStruct.forEach((val) => console.log(val.innerHTML));
     </script>
   </body>
 </html>
