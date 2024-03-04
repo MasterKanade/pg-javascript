@@ -48,7 +48,12 @@
         console.log("I AM Clicked!!");
         localStorage.setItem("pg-button", count);
         // getUser.classList.add("changeColor");   // change oncli behaviour by adding class
-        getUser.style.color = "red"; // change onclick behaviour by ID
+        //getUser.style.color = "red"; // change onclick behaviour by ID
+        if (getUser.style.color === "red") {
+          getUser.style.color = "blue";
+        } else {
+          getUser.style.color = "red";
+        }
       };
       buttonEvent.addEventListener("click", behaviour);
     </script>
