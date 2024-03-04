@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElementByID</title>
+    <style>
+      .red-color {
+        color: red;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>This is my Nav Bar</nav>
+    <div class="block">
+      <p class="block">The new car has been taken for the Enjoyment</p>
+      <p id="second-para">
+        Busy people, always makes an exception to do not attend any Program.
+      </p>
+    </div>
+    <div>
+      <div class="block">Nested Div Started.</div>
+      <h3>new div has been taken for the QuerySelector</h3>
+      <span id="username">Mayur Kanade</span>
+      <h3>It will not be hacked until we choose QuerySelectAll for Div</h3>
+    </div>
+    <pre><code>console.log('hey there');</code></pre>
+    <script>
+      const ele = document.getElementById("username");
+      console.log(ele);
+      console.log(ele.id);
+      ele.setAttribute("font-family", "cursive");
+      ele.innerText = "Iron Man"; // added innerText
+      ele.classList.add("red-color", "underline"); // the new underline text decoration is applied
+      console.log(ele.classList); // the classList be shown
+      ele.classList.remove("underline"); //  to remove the class
+      ele.style.textDecoration = "underline"; // inline has the highest priority
+      ele.style.color = "green"; // inline has the highest priority
+      ele.parentElement.style.backgroundColor = "lightgrey"; // applying background color on the parentElement
+      ele.remove(); // whole line would be no more.
+    </script>
+  </body>
+</html>
