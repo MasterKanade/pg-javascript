@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuerySelector In JS</title>
+  </head>
+  <body>
+    <nav>This is my Nav Bar</nav>
+    <div class="block">
+      <p class="para">The new car has been taken for the Enjoyment</p>
+      <p>
+        Busy people, always makes an exception to do not attend any Program.
+      </p>
+    </div>
+    <pre><code>console.log('hey there');</code></pre>
+    <script>
+      // QuerySelector in Javascript
+      /* You can apply QuerySelector in Javascript by using following 3 ways:
+      
+      1. tag : HTML tag can be used to change the scenario
+      2. id : #id name to select particular change.
+      3. class: .class-name to perform operations on either one or more classes.
+      
+      */
+
+      // 1. tag : by selecting a particular tag you can change the HTML page
+      // for example.
+      // The main content from the body has been replaced by new text using Javascript.
+      const bodyChange = document.querySelector("body");
+      bodyChange.innerHTML = "<h1> The Page is Hacked!!! </h1>";
+    </script>
+  </body>
+</html>
