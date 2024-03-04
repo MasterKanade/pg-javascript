@@ -33,3 +33,15 @@ console.log(forEachSquare); // forEach does not return any value. output : undef
 
 let mapSquare = numStore.map((val) => square(val));
 console.log(mapSquare); // map returns the value into newArray. output: [4,16,36,64]
+
+let findNumber = numStore.find((val) => val === 4);
+console.log(findNumber); // true if present the number and if not present then it's undefined.
+
+let findIndexOfNumber = numStore.findIndex((val) => val === 4);
+console.log(findIndexOfNumber); // true if present the number and if not present then it's -1
+
+let isPresent = numStore.includes(4);
+console.log(isPresent); // if number is present it will return true and if not present then it will be false.
+
+let filterEven = numStore.filter((val) => val % 2 === 0);
+console.log(filterEven);
