@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElementByID</title>
+    <style>
+      .red-color {
+        color: red;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+      .remove {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="block">This is my Nav Bar</nav>
+    <div class="block remove">
+      <p>The new car has been taken for the Enjoyment</p>
+      <p id="second-para">
+        Busy people, always makes an exception to do not attend any Program.
+      </p>
+    </div>
+    <div>
+      <div>Nested Div Started.</div>
+      <h3>new div has been taken for the QuerySelector</h3>
+      <span id="username">Mayur Kanade</span>
+      <p class="block">
+        It will not be hacked until we choose QuerySelectAll for Div
+      </p>
+    </div>
+    <pre><code>console.log('hey there');</code></pre>
+    <script>
+      const elements = document.getElementsByClassName("block");
+      console.log(elements); // getting all the applied classnamed html elements
+
+      for (let i = 0; i < elements.length; i++) {
+        elements.item(i).style.background = "grey";
+        console.log(elements.item(i).classList);
+        elements.item(i).classList.remove("remove"); // removed the class name as a remove from the page.
+      }
+    </script>
+  </body>
+</html>
