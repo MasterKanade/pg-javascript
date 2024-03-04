@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventListener</title>
+    <style>
+      #js-btn {
+        height: 100px;
+        width: 150px;
+        background-color: coral;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 25px;
+      }
+      .changeColor {
+        background-color: black;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="js-btn">Click Me</button>
+    <div>
+      <h3 id="username">My Name Is Mayur Kanade</h3>
+      <div>
+        <p>This is new para</p>
+      </div>
+      User is Added Successfully.
+      <button>This button will be Vanished On Click</button>
+    </div>
+    <script>
+      const buttonEvent = document.getElementById("js-btn");
+      const getUser = document.getElementById("username");
+      const divChildrens = document.querySelector("body").children;
+      console.log(divChildrens);
+
+      for (let i = 0; i < divChildrens.length; i++) {
+        divChildrens.item(i).addEventListener("click", () => {
+          divChildrens.item(i).remove();
+        });
+      }
+
+      let count = 0;
+      let behaviour = () => {
+        count++;
+        buttonEvent.innerText = count;
+        console.log("I AM Clicked!!");
+        localStorage.setItem("pg-button", count);
+        // getUser.classList.add("changeColor");   // change oncli behaviour by adding class
+        getUser.style.color = "red"; // change onclick behaviour by ID
+      };
+      buttonEvent.addEventListener("click", behaviour);
+    </script>
+    <script>
+      /*what if another user used a same event*/
+      buttonEvent.addEventListener("click", () => {
+        console.log(
+          "The same event used by another User: so its not Overriden"
+        );
+      });
+    </script>
+  </body>
+</html>
