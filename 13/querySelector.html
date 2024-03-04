@@ -9,7 +9,7 @@
     <nav>This is my Nav Bar</nav>
     <div class="block">
       <p class="para">The new car has been taken for the Enjoyment</p>
-      <p class="para2">
+      <p id="second-para">
         Busy people, always makes an exception to do not attend any Program.
       </p>
     </div>
@@ -44,14 +44,20 @@
       // to perform actions on all div tags we need to put querySelectorAll() method.
       // example:
 
-      const alldivChange = document.querySelectorAll("div");
+      /* const alldivChange = document.querySelectorAll("div");
       for (let i = 0; i < alldivChange.length; i++) {
         alldivChange[i].style.backgroundColor = "red";
         alldivChange[i].innerHTML = "DIV tag Hacked";
       }
 
       const codeChange = document.querySelector("code");
-      codeChange.innerHTML = `alert('hey there')`;
+      codeChange.innerHTML = `alert('hey there')`; */
+
+      // 2. change by using ID
+
+      const changeparabyID = document.querySelector("#second-para");
+      changeparabyID.innerHTML =
+        "<marquee>The #ID Applied using QuerySelector </marquee>";
     </script>
   </body>
 </html>
